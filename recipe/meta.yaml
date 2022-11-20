@@ -1,5 +1,5 @@
 {% set name = "py-modelrunner" %}
-{% set version = "0.7" %}
+{% set version = "0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-modelrunner-{{ version }}.tar.gz
-  sha256: 0c300be738fafd52e704b85036fa242c1903a670ba66e06d7797e2908024e5b2
+  sha256: 69acfdc683ce6d4ee13fecc8b921b9df51dab04617319bc32b43420273eb9660
 
 build:
   noarch: python
