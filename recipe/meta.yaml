@@ -12,12 +12,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools_scm
   run:
     - python >=3.8
     - jinja2 >=3
@@ -28,12 +29,14 @@ requirements:
     - tqdm >=4.45
 
 test:
+  requires:
+    - pip
   imports:
     - modelrunner
   commands:
     - pip check
-  requires:
-    - pip
+    # Check whether the pip version is reported correctly
+    - pip list | grep -i {{ name }} | grep {{ version }}    
 
 about:
   home: https://github.com/zwicker-group/py-modelrunner
