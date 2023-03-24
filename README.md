@@ -1,11 +1,11 @@
-About py-modelrunner
-====================
+About py-modelrunner-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-modelrunner-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/zwicker-group/py-modelrunner
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-modelrunner-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python classes for organizing (HPC) simulations
 
