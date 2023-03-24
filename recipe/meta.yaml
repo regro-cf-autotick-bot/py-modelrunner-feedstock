@@ -1,5 +1,5 @@
 {% set name = "py-modelrunner" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-modelrunner-{{ version }}.tar.gz
-  sha256: 789664463c879a3ee15a77549959731380c156c2a601208b7a60de22ac84bb09
+  sha256: c629b41634c8de79f0c7ef3ff174fac3e4960f2fdba3753538d65ee1cb2ab4d9
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -36,7 +36,7 @@ test:
   commands:
     - pip check
     # Check whether the pip version is reported correctly
-    - pip list | grep -i {{ name }} | grep {{ version }}    
+    - pip list | grep -i {{ name }} | grep {{ version }}
 
 about:
   home: https://github.com/zwicker-group/py-modelrunner
